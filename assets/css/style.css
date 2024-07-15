@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*
+    Fonts
+    Poppins 400 600
+    Open Sans 400
+*/
+
+/*
+    Variables
+*/
+
+:root {
+    --font-family-default: 'Open Sans', Helvetica, Arial, sans-serif;
+    --font-family-title-default: 'Poppins', Helvetica, Arial, sans-serif;
+    --font-size-default: 16px;
+
+    --color-body-background: hsl(257, 40%, 49%);
+    --color-hover: hsl(300, 69%, 71%);
+    --color-hover-icon-circle: hsl(289, 47%, 52%);
+    --color-hover-icon: hsl(321, 98%, 66%);
+
+    --container-max-width-mobile: 603px;
+    --container-max-width-desktop: 1280px;
+    --container-margins-mobile: 63px auto 80px;
+    --container-margins-desktop: 47.5px 73px 40px;
+
+    --btn-max-width-mobile: 400px;
+    --btn-max-width-desktop: 200px;
+
+    --icon-size-mobile: 1.8rem;
+    --icon-size-desktop: 1.25rem;
+    --icon-circle-size-mobile: 56px;
+    --icon-circle-size-desktop: 40px;
+    --icon-circle-opacity-desktop: 70%;
+}
+
+/*
+    Reset
+*/
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+/*
+    Base style
+*/
+
+html {
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-default);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background: var(--color-body-background);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*
+    container
+*/
+
+.container {
+    max-width: var(--container-max-width-mobile);
+    margin: var(--container-margins-mobile);
+}
+
+/*
+    background image
+*/
+
+body {
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*
+    header block
+*/
+
+.header {
+    margin-left: -.55rem;
+    margin-bottom: 7.2rem;
+}
+
+.header__logo {
+    transform: scale(95%) scaleX(103%);
+}
+
+/*
+    message block
+*/
+
+.message {
+    overflow: auto;
+    margin-bottom: 8rem;
+}
+
+.message__image {
+    margin-bottom: 7.25rem;
+}
+
+.message__body {
+    overflow: auto;
+}
+
+.message__title {
+    font-family: var(--font-family-title-default);
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -.015rem;
+
+    margin-bottom: 1.65rem;
+}
+
+.message__text {
+    font-family: var(--font-family-default);
+    font-size: 1.95rem;
+    color: white;
+    text-align: center;
+    line-height: 1.54;
+    letter-spacing: .027rem;
+    opacity: 95%;
+
+    margin-bottom: 3rem;
+}
+
+/*
+    button block
+*/
+
+.btn {
+    display: block;
+    font-family: var(--font-family-title-default);
+    font-size: 1.5rem;
+    color: var(--color-body-background);
+    background: white;
+    text-decoration: none;
+    text-align: center;
+    max-width: var(--btn-max-width-mobile);
+    margin: auto;
+    padding: 1.5rem 0 1.25rem;
+    border-radius: 3rem;
+
+    box-shadow: 2px 5px 5px hsla(0, 0%, 0%, 55%);
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    color: white;
+}
+
+/*
+    icon block
+*/
+
+.icons {
+    text-align: center;
+    color: white;
+    font-size: var(--icon-size-mobile);
+    transform: scaleX(95%);
+}
+
+.icon {
+    display: inline-block;
+    width: var(--icon-circle-size-mobile);
+    height: var(--icon-circle-size-mobile);
+    border: 2px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding-top: .1em;
+    color: white;
+    opacity: 85%;
+    text-align: center;
+
+    margin-right: .95rem;
+}
+
+.icon:last-child {
+    margin-right: 0;
+}
+
+.icon:hover {
+    color: var(--color-hover-icon);
+    border-color: var(--color-hover-icon-circle);
+    cursor: pointer;
+}
+
+.fa {
+    vertical-align: middle;
+}
+
+/*
+    large screen settings
+*/
+
+@media (min-width: 81.25em) {
+
+    /*
+        background image
+    */
+
+    body {
+        background-image: url("../images/bg-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .container {
+        max-width: var(--container-max-width-desktop);
+        margin: var(--container-margins-desktop);
+    }
+
+    /*
+        header block
+    */
+
+    .header {
+        margin-bottom: 4.7rem;
+    }
+
+    .header__logo {
+        transform: scale(80%) scaleX(102%);
+        margin-left: -1.2rem;
+    }
+
+    /*
+        message block
+    */
+
+    .message {
+        margin-bottom: 1.35rem;
+    }
+
+    .message__image {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .message__body {
+        padding: 2.75rem 3.3rem;
+        padding-right: 0;
+    }
+
+    .message__title {
+        font-size: 2.5rem;
+        text-align: left;
+
+        margin-bottom: 1.25rem;
+    }
+
+    .message__text {
+        font-size: 1.1rem;
+        text-align: left;
+        line-height: 1.52;
+        letter-spacing: .014rem;
+        opacity: 80%;
+
+        margin-bottom: 1.55rem;
+    }
+
+    /*
+        button block
+    */
+
+    .btn {
+        display: inline-block;
+        max-width: var(--btn-max-width-desktop);
+        width: var(--btn-max-width-desktop);
+        font-size: 1.13rem;
+        letter-spacing: -.005rem;
+        padding: .8rem 0 1rem;
+    }
+
+    /*
+        icon block
+    */
+
+    .icons {
+        font-size: var(--icon-size-desktop);
+        text-align: right;
+        float: right;
+        transform: scaleX(100%);
+        margin-right: -.5rem;
+    }
+
+    .icon {
+        width: var(--icon-circle-size-desktop);
+        height: var(--icon-circle-size-desktop);
+        margin-right: .67rem;
+        border-color: hsla(0,0%,100%, var(--icon-circle-opacity-desktop));
+    }
+}

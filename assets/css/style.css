@@ -210,6 +210,12 @@ body {
     vertical-align: middle;
 }
 
+.icon__text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
 /*
     large screen settings
 */
